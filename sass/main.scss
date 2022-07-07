@@ -197,7 +197,7 @@ h1.company-name {
       margin-bottom: 1em;
       width: 60px;
     }
-    h3{
+    h3 {
       margin-bottom: 0.6em;
       text-transform: uppercase;
     }
@@ -213,6 +213,50 @@ h1.company-name {
       grid-row: 3/4;
       grid-column: 1/-1;
     }
+  }
+}
+.info {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    'title'
+    'box'
+    'box';
+  padding: 6em 2em;
+  &__title {
+    grid-area: title;
+  }
+  &__boxes {
+    grid-area: box;
+  }
+  &__box-img {
+    width: 100%;
+    object-fit: cover;
+    filter: sepia();
+  }
+  &__box-title {
+    margin: 0.3em 0em;
+    font-size: 2.6rem;
+    color: $gold;
+    font-weight: 200;
+  }
+  &__box-text {
+    margin-bottom: 0.5em;
+  }
+  &__box-link {
+    display: block;
+    margin-bottom: 2em;
+    font-weight: bold;
+    color: $gold;
+    text-align: right;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+      color: $darkgold;
+    }
+  }
+  &__bg-icon {
+    display: none;
   }
 }
 @import './small';

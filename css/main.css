@@ -358,6 +358,119 @@ h1.company-name {
   grid-column: 1/-1;
 }
 
+.info {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'title' 'box' 'box';
+  padding: 6em 2em;
+}
+
+.info__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.info__boxes {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: box;
+}
+
+.info__box-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: sepia();
+          filter: sepia();
+}
+
+.info__box-title {
+  margin: 0.3em 0em;
+  font-size: 2.6rem;
+  color: #d6c78e;
+  font-weight: 200;
+}
+
+.info__box-text {
+  margin-bottom: 0.5em;
+}
+
+.info__box-link {
+  display: block;
+  margin-bottom: 2em;
+  font-weight: bold;
+  color: #d6c78e;
+  text-align: right;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.info__box-link:hover {
+  color: #9b9165;
+}
+
+.info__bg-icon {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .info {
+        grid-template-areas: 'title box' 'title box' 'title box';
+    padding: 10em 2em;
+  }
+  .info__box {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .info__box-img, .info__box-text {
+    max-width: 500px;
+  }
+  .info__title {
+    padding: 0 1em;
+  }
+  .info__bg-icon {
+    position: absolute;
+    display: block;
+    opacity: 0.05;
+    z-index: -5;
+  }
+  .info__bg-icon--one {
+    top: 14%;
+    width: 20%;
+    left: -5%;
+    -webkit-animation: rotate-right 160s infinite;
+            animation: rotate-right 160s infinite;
+  }
+  .info__bg-icon--two {
+    bottom: 10%;
+    left: 10%;
+    width: 30%;
+    -webkit-animation: rotate-left 140s infinite;
+            animation: rotate-left 140s infinite;
+  }
+  .info__bg-icon--three {
+    top: 26%;
+    left: 16%;
+    width: 30%;
+    -webkit-animation: rotate-left 140s infinite;
+            animation: rotate-left 140s infinite;
+  }
+  .info__bg-icon--four {
+    top: 55%;
+    left: -10%;
+    width: 15%;
+    -webkit-animation: rotate-right 140s infinite;
+            animation: rotate-right 140s infinite;
+  }
+}
+
 @media (min-width: 768px) {
   .cards__card__box {
     padding: 10em 2em;
@@ -389,6 +502,12 @@ h1.company-name {
 }
 
 @media (min-width: 992px) {
+  .section-title {
+    font-size: 4.8rem;
+  }
+  .section-title::before {
+    height: 4px;
+  }
   h1.company-name {
     font-size: 6rem;
   }
