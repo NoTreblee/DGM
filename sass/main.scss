@@ -250,7 +250,7 @@ h1.company-name {
     color: $gold;
     text-align: right;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: 0.3s;
     &:hover {
       color: $darkgold;
     }
@@ -258,6 +258,86 @@ h1.company-name {
   &__bg-icon {
     display: none;
   }
+}
+.plans {
+  padding: 6em 2em;
+  background-color: $darker;
+  &__box {
+    margin: 1em 0;
+    padding: 2em 1em;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: $dark;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      background-color: $darker;
+      border: 1px solid $gold;
+    }
+  }
+  &__item {
+    margin: 1em 0;
+    &-icon {
+      width: 50px;
+    }
+    &-name {
+      margin-top: 0;
+      margin-bottom: 1.5em;
+      font-size: 1.8rem;
+      color: $gold;
+    }
+  }
+}
+.newsletter {
+  padding: 8em 2em;
+  background-color: $red;
+  text-align: center;
+  &__text {
+    padding: 1em;
+    margin-bottom: 1em;
+    font-size: 4rem;
+    font-weight: 200;
+  }
+  &__form {
+    input {
+      margin-bottom: 1em;
+      padding: 1em;
+      width: 100%;
+      background-color: $white;
+      border: 1px solid transparent;
+    }
+    button {
+      padding: 1em;
+      border: 1px solid $gold;
+      background: none;
+      color: $gold;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        color: $red;
+        background-color: $gold;
+      }
+    }
+  }
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    &:nth-child(odd) {
+      display: none;
+    }
+  }
+}
+.footer {
+  padding: 3em 1em;
+  border-top: 1px solid $darker;
+  text-align: center;
 }
 @import './small';
 @import './medium';
