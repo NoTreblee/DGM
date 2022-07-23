@@ -96,6 +96,40 @@ h1.company-name {
   color: #d6c78e;
 }
 
+.fixed {
+  overflow: hidden;
+}
+
+@-webkit-keyframes bumping {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  30% {
+    -webkit-transform: translate(0px, -25px);
+            transform: translate(0px, -25px);
+  }
+  80% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes bumping {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  30% {
+    -webkit-transform: translate(0px, -25px);
+            transform: translate(0px, -25px);
+  }
+  80% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -236,7 +270,7 @@ h1.company-name {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #fff;
+  background-color: #ffffffef;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -249,6 +283,37 @@ h1.company-name {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.nav-mobile .mybtn {
+  position: fixed;
+  bottom: -5%;
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background: none;
+  /* Set a background color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 2em;
+  /* Some padding */
+  border-radius: 8px;
+  /* Rounded corners */
+  font-size: 2.5rem;
+  /* Increase font size */
+  -webkit-animation: bumping 3s infinite;
+          animation: bumping 3s infinite;
+  opacity: 60%;
+  color: black;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .nav-mobile--active {
@@ -264,13 +329,14 @@ h1.company-name {
   position: relative;
   display: inline-block;
   margin: 0.5em;
-  padding: 0.5em;
+  padding: 1.2em 0.5em;
   font-size: 2.3rem;
   color: #191919;
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  text-align: center;
 }
 
 .nav__link:hover {
@@ -580,8 +646,8 @@ h1.company-name {
   font-weight: bold;
   color: #d6c78e;
   cursor: pointer;
-  -webkit-transition: background-color .3s, color .3s;
-  transition: background-color .3s, color .3s;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .contact__form-btn:hover, .contact__form-btn:focus {
