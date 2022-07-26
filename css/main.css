@@ -270,7 +270,7 @@ h1.company-name {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #ffffffef;
+  background-color: #fff;
   position: fixed;
   top: 0;
   bottom: 0;
