@@ -288,6 +288,8 @@ h1.company-name {
 .nav-mobile .mybtn {
   position: fixed;
   bottom: 1%;
+  right: 50%;
+
   z-index: 99;
   /* Make sure it does not overlap */
   border: none;
